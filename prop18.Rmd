@@ -13,8 +13,13 @@ knitr::opts_chunk$set(echo = TRUE)
 install.packages("tidyverse")
 library(magrittr)
 library(tidyverse)
-
+library(readxl)
 ```
+```{r}
+table01 = read_excel("table01.xlsx")
+```
+
+
 ```{r}
 table01 = table01[, -1]
 ```
