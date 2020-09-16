@@ -1,0 +1,94 @@
+---
+title: "prop18"
+author: "Austin Chen"
+date: "9/15/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+install.packages("tidyverse")
+library(magrittr)
+library(tidyverse)
+
+```
+```{r}
+table01 = table01[, -1]
+```
+
+```{r}
+table01 = table01[-c(1:6),]
+```
+
+```{r}
+colnames(table01)
+```
+
+```{r}
+voter_data = table01
+```
+
+```{r}
+View(voter_data)
+```
+
+
+```{r}
+voter_data = voter_data %>% 
+  rename(
+    Age = ...2,
+    Total_Population = ...3,
+    Total_Citizen_Population = ...4,
+    Reported_Registered_Number = ...5,
+    Reported_Registered_Percent = ...6,
+    Reported_Not_Registered_Number = ...7,
+    Reported_Not_Registered_Percent = ...8,
+    No_Response_Registration_Number = ...9,
+    No_Response_Registration_Percent = ...10,
+    Reported_Voted_Number = ...11,
+    Reported_Voted_Percent = ...12,
+    Reported_Not_Voted_Number = ...13,
+    Reported_Not_Voted_Number_Percent = ...14,
+    No_Response_Voted_Number = ...15,
+    No_Response_Voted_Percent = ...16, 
+    Total_Population_Reported_Registered_Percent = ...17,
+    Total_Population_Report_Voting_Percent = ...18
+    
+    
+    )
+```
+
+```{r}
+View(voter_data)
+```
+
+```{r}
+voter_data = voter_data[-c(217:223),]
+```
+
+```{r}
+both_sexes_data = voter_data[c(1:72),]
+```
+
+```{r}
+head(both_sexes_data)
+```
+```{r}
+male_data = voter_data[c(73:144),]
+```
+
+```{r}
+head(male_data)
+```
+
+```{r}
+female_data = voter_data[c(145:216),]
+```
+
+```{r}
+head(female_data)
+```
+
