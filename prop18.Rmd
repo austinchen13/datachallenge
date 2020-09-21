@@ -75,14 +75,32 @@ voter_data = voter_data[-c(217:223),]
 ```
 
 ```{r}
+glimpse(voter_data)
+```
+
+```{r}
+voter_data[, c(2:17)] <- sapply(voter_data[, c(2:17)], as.numeric)
+```
+
+```{r}
 both_sexes_data = voter_data[c(1:72),]
 ```
 
 ```{r}
+glimpse(both_sexes_data)
+```
+
+
+```{r}
 head(both_sexes_data)
 ```
+
 ```{r}
 male_data = voter_data[c(73:144),]
+```
+
+```{r}
+glimpse(male_data)
 ```
 
 ```{r}
@@ -94,6 +112,66 @@ female_data = voter_data[c(145:216),]
 ```
 
 ```{r}
+glimpse(female_data)
+```
+
+```{r}
 head(female_data)
+```
+
+
+
+```{r}
+summary(voter_data[, c(2:17)])
+```
+```{r}
+View(both_sexes_data)
+```
+
+```{r}
+library(ggplot2)
+```
+
+
+```{r}
+both_sexes_data$Age[c(9:70)] <- gsub(" years", " " , both_sexes_data$Age[c(9:70)] )
+```
+
+```{r}
+View(both_sexes_data)
+```
+
+```{r}
+glimpse(both_sexes_data)
+```
+```{r}
+both_sexes_data = both_sexes_data[-c(1:8),]
+
+```
+
+```{r}
+both_sexes_data = both_sexes_data[-c(63:64),]
+```
+
+```{r}
+both_sexes_data$Age <- sapply(both_sexes_data$Age, as.numeric)
+```
+
+```{r}
+glimpse(both_sexes_data$Age[c(9:70)])
+```
+```{r}
+both_sexes_data %>% 
+  ggplot(aes(x = Age , y = Reported_Voted_Number)) + geom_line(color = "blue") +ggtitle("Age vs. Number of People Voted in 2018")
+```
+```{r}
+library(corrplot)
+```
+
+
+
+```{r}
+both_sexes_data_matrix = as.matrix(both_sexes_data)
+corrplot(cor(both_sexes_data_matrix, use="pairwise.complete.obs"), is.corr = FALSE, method = "circle", type = "lower")
 ```
 
