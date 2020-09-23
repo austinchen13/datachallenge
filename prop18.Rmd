@@ -165,6 +165,11 @@ both_sexes_data %>%
   ggplot(aes(x = Age , y = Reported_Voted_Number)) + geom_line(color = "blue") +ggtitle("Age vs. Number of People Voted in 2018")
 ```
 ```{r}
+both_sexes_data %>% 
+  ggplot(aes(x = Age , y = Reported_Voted_Number)) + geom_point(color = "orange") +ggtitle("Age vs. Number of People Voted in 2018")
+```
+
+```{r}
 library(corrplot)
 ```
 
@@ -175,3 +180,21 @@ both_sexes_data_matrix = as.matrix(both_sexes_data)
 corrplot(cor(both_sexes_data_matrix, use="pairwise.complete.obs"), is.corr = FALSE, method = "circle", type = "lower")
 ```
 
+```{r}
+qplot(both_sexes_data$Age, both_sexes_data$Reported_Voted_Percent, main = "Plot of Age vs. Reported Voted Percent", xlab = "Age", ylab = "Reported Voted Percent", colour = both_sexes_data$Age) 
+```
+
+```{r}
+qplot(both_sexes_data$Age, both_sexes_data$Reported_Not_Voted_Number, main = "Plot of Age vs. Reported Not Voted Number in thousands", xlab = "Age", ylab = "Reported Not Voted Number in thousands", colour = both_sexes_data$Age) 
+```
+
+```{r}
+remove.packages(c("highcharter", "data.table"))
+install.packages('highcharter')
+install.packages('data.table')
+library(highcharter)
+```
+
+```{r}
+hchart(both_sexes_data, "scatter", hcaes(x = Age, y = Reported_Voted_Percent))  
+```
