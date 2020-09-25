@@ -2,7 +2,9 @@
 title: "prop18"
 author: "Austin Chen"
 date: "9/15/2020"
-output: html_document
+output:
+  html_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -37,7 +39,7 @@ voter_data = table01
 ```
 
 ```{r}
-View(voter_data)
+#View(voter_data)
 ```
 
 
@@ -67,7 +69,7 @@ voter_data = voter_data %>%
 ```
 
 ```{r}
-View(voter_data)
+#View(voter_data)
 ```
 
 ```{r}
@@ -125,7 +127,7 @@ head(female_data)
 summary(voter_data[, c(2:17)])
 ```
 ```{r}
-View(both_sexes_data)
+#View(both_sexes_data)
 ```
 
 ```{r}
@@ -138,7 +140,7 @@ both_sexes_data$Age[c(9:70)] <- gsub(" years", " " , both_sexes_data$Age[c(9:70)
 ```
 
 ```{r}
-View(both_sexes_data)
+#View(both_sexes_data)
 ```
 
 ```{r}
@@ -160,6 +162,9 @@ both_sexes_data$Age <- sapply(both_sexes_data$Age, as.numeric)
 ```{r}
 glimpse(both_sexes_data$Age[c(9:70)])
 ```
+
+
+
 ```{r}
 both_sexes_data %>% 
   ggplot(aes(x = Age , y = Reported_Voted_Number)) + geom_line(color = "blue") +ggtitle("Age vs. Number of People Voted in 2018")
@@ -171,6 +176,10 @@ both_sexes_data %>%
 
 ```{r}
 library(corrplot)
+```
+```{r}
+both_sexes_data %>% 
+  ggplot(aes(x = Age , y = Reported_Registered_Percent)) + geom_point(color = "purple") +ggtitle("Age vs. Percentage of People Registered to Vote in 2018")
 ```
 
 
@@ -189,9 +198,9 @@ qplot(both_sexes_data$Age, both_sexes_data$Reported_Not_Voted_Number, main = "Pl
 ```
 
 ```{r}
-remove.packages(c("highcharter", "data.table"))
-install.packages('highcharter')
-install.packages('data.table')
+#remove.packages(c("highcharter", "data.table"))
+#install.packages('highcharter')
+#install.packages('data.table')
 library(highcharter)
 ```
 
