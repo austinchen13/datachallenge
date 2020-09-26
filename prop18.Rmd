@@ -12,7 +12,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r}
+install.packages("magrittr")
 install.packages("tidyverse")
+install.packages("readxl")
 library(magrittr)
 library(tidyverse)
 library(readxl)
@@ -39,7 +41,7 @@ voter_data = table01
 ```
 
 ```{r}
-#View(voter_data)
+View(voter_data)
 ```
 
 
@@ -69,7 +71,7 @@ voter_data = voter_data %>%
 ```
 
 ```{r}
-#View(voter_data)
+View(voter_data)
 ```
 
 ```{r}
@@ -127,10 +129,11 @@ head(female_data)
 summary(voter_data[, c(2:17)])
 ```
 ```{r}
-#View(both_sexes_data)
+View(both_sexes_data)
 ```
 
 ```{r}
+install.packages("ggplot2")
 library(ggplot2)
 ```
 
@@ -140,7 +143,7 @@ both_sexes_data$Age[c(9:70)] <- gsub(" years", " " , both_sexes_data$Age[c(9:70)
 ```
 
 ```{r}
-#View(both_sexes_data)
+View(both_sexes_data)
 ```
 
 ```{r}
@@ -175,6 +178,7 @@ both_sexes_data %>%
 ```
 
 ```{r}
+install.packages("corrplot")
 library(corrplot)
 ```
 ```{r}
@@ -198,9 +202,9 @@ qplot(both_sexes_data$Age, both_sexes_data$Reported_Not_Voted_Number, main = "Pl
 ```
 
 ```{r}
-#remove.packages(c("highcharter", "data.table"))
-#install.packages('highcharter')
-#install.packages('data.table')
+remove.packages(c("highcharter", "data.table"))
+install.packages('highcharter')
+install.packages('data.table')
 library(highcharter)
 ```
 
