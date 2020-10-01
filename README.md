@@ -1,14 +1,35 @@
 ## Data Detectives ReadMe.
 
-In this repository, we have our R Markdown script containing all of our analysis and code. The folder titled: “prop18_files/figure-latex” contains images of our graphs. Prop18.Rmd contains the entire analysis and code of the dataset. Prop18_presentation.mp4 is the file which contains the video recording of our presentation. Table01.xlsx contains an excel spreadsheet of our dataset. 
+*This is the main directory for data and support files related to the Data Detective’s Prop 18 project*
 
-### Dataset
+### Last updated: 09/30/2020
+### Last update by: Ambar Mishra
 
-We utilized the 2018 election data from the United States Census Bureau. Here is the link to find the dataset: https://www.census.gov/data/tables/time-series/demo/voting-and-registration/p20-583.html
-It is called table01.xlsx in the github repository. There are about 270 data entries and 17 columns in the dataset. 
+## Directory Manifest
+
+In this repository, we have our R Markdown script containing all of our analysis and code.
+*Folders :
+
+* “prop18_files/figure-latex” - contains images of our graphs. We have taken screenshots for each of the graphs we have made. 
+* “ Prop18.Rmd” - Contains the entire analysis and code for our entire project. 
+* “Prop18_presentation.mp4” - The file which contains the video recording of our presentation
+* “Table01.xlsx” - contains an excel spreadsheet of our dataset. We had received this from the United States Census Bureau. 
 
 
-### Prop 18 R Markdown file
+### Personnel/Contributors:
+Austin Chen auschen@ucdavis.edu, (510-709-9197
+In charge of importing dataset, forming Readme, presentation and code.
+Ambar Mishra, ambmishra@ucdavis.edu, (510)-298-8430
+In charge of finding dataset, forming Readme, presentation and code. 
+
+
+### Project URLs:
+
+We utilized the 2018 election data from the United States Census Bureau. Here is the link to find the dataset: 
+https://www.census.gov/data/tables/time-series/demo/voting-and-registration/p20-583.html
+### Project Repositories:
+https://github.com/HotSauceMan/Data_Challenge
+
 
 ### Importing the dataset
 
@@ -28,6 +49,3 @@ Make sure you run each code chunk one at a time, not all at once.
 When installing hchart, you will be asked this question:
             Do you want to install from sources the package which needs compilation? (Yes/no/cancel)
 Reply “no” to this question. 
-
-### Prop 18 Presentation
-This file contains a video of our presentation where we analyze the data visualizations we made along with our thoughts on the whole project. 
