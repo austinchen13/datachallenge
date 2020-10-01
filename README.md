@@ -11,9 +11,9 @@ In this repository, we have our R Markdown script containing all of our analysis
 *Folders :
 
 * “prop18_files/figure-latex” - contains images of our graphs. We have taken screenshots for each of the graphs we have made. 
-* “ Prop18.Rmd” - Contains the entire analysis and code for our entire project. 
-* “Prop18_presentation.mp4” - The file which contains the video recording of our presentation
-* “Table01.xlsx” - contains an excel spreadsheet of our dataset. We had received this from the United States Census Bureau. 
+* “prop18.rmd” - Contains the entire analysis and code for our entire project. 
+* “prop18_pres.mp4” - The file which contains the video recording of our presentation
+* “table01.xlsx” - contains an excel spreadsheet of our dataset. We had received this from the United States Census Bureau. 
 
 
 ### Personnel/Contributors:
@@ -41,9 +41,13 @@ Make sure you type in your name and information at the top.
 
 ### Packages
 Xlsx: Package for reading excel files
+
 Maggritr, tidyverse: We used these packages to implement the %>% function. 
+
 Ggplot: This data visualization package allowed us to make advanced plots with minimal code
+
 Hchart: This was used for drawing a particular plot for an object of a particular class. This package assisted us with making interactive graphs. 
+
 Corrplot: Package helped us visualize relationships in our data. 
 ### Running
 Make sure you run each code chunk one at a time, not all at once. 
