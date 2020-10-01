@@ -17,8 +17,9 @@ In this repository, we have our R Markdown script containing all of our analysis
 
 
 ### Personnel/Contributors:
-Austin Chen auschen@ucdavis.edu, (510-709-9197
+Austin Chen auschen@ucdavis.edu, (510-709-9197)
 In charge of importing dataset, forming Readme, presentation and code.
+
 Ambar Mishra, ambmishra@ucdavis.edu, (510)-298-8430
 In charge of finding dataset, forming Readme, presentation and code. 
 
